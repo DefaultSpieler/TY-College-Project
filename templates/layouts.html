@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website {{ title }}</title>
+    <!-- Import Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- socket io link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav style="background-color: #ff9800;">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Logo</a>
+          <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="recommend.html">Recommend</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="admin_login.html">Admin</a></li>
+            <li><a href="user.html">Profile</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <ul class="sidenav" id="mobile-menu">
+        <li><a href="recommend.html">Recommend</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="admin_login.html">Admin</a></li>
+        <li><a href="user.html">Profile</a></li>
+      </ul>
+    </header>
+
+{% block content %} {% endblock content %}
+      <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Developer Bio</h5>
+          <p class="grey-text text-lighten-4">This is a college project for my 3rd year BCA sci course. This is a book recommendation and review system. </p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">References</h5>
+          <ul>
+            <li><a class="white-text" href="https://openai.com/blog/chatgpt">ChatGPT</a></li>
+            <li><a class="white-text" href="https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g">Corey Schafer</a></li>
+            <li><a class="white-text" href="https://materializecss.com/">Materialize</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Datasets used</h5>
+          <ul>
+            <li><a class="white-text" href="https://www.kaggle.com/datasets/saurabhbagchi/books-dataset">Books Dataset</a></li>
+            <li><a class="white-text" href="https://github.com/rajkrishna92/Machine-Leaning-projects-for-beginners">ML Model Dataset</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made with &#x2764; by DefaultSpieleR</a>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Import Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      // Initialize sidenav
+      const sideNav = document.querySelector('.sidenav');
+      M.Sidenav.init(sideNav, {});
+    </script>
+  </body>
+</html>

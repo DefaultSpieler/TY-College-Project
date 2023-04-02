@@ -1,0 +1,54 @@
+{% extends 'layouts.html' %}
+
+{% block content %}
+    
+    <div class="container">
+      <!-- Profile Info -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://via.placeholder.com/300x300" alt="Profile Picture">
+            </div>
+            <div class="card-content">
+              <h4 class="card-title">John Doe</h4>
+              <p>Email: john.doe@gmail.com</p>
+              <a href="#">Change Password</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Rated Books Table -->
+        <div class="col s12 m8">
+          <table class="striped">
+            <thead>
+              <tr>
+                <th>Book Title</th>
+                <th>Author</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>The Great Gatsby</td>
+                <td>F. Scott Fitzgerald</td>
+                <td>4.5</td>
+              </tr>
+              <tr>
+                <td>1984</td>
+                <td>George Orwell</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>To Kill a Mockingbird</td>
+                <td>Harper Lee</td>
+                <td>4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+
+ {% endblock %}
