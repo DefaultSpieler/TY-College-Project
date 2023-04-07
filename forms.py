@@ -20,3 +20,16 @@ class AddBook(FlaskForm):
 	book_author = StringField('Book Author', validators = [DataRequired()])
 	book_picture = StringField('Book Picture', validators = [DataRequired()])
 	submit = SubmitField('Add to Database')
+
+class AdminLogin(FlaskForm):
+	email = StringField('Email', validators = [DataRequired(), Email()])
+	password = PasswordField('password', validators = [DataRequired()])
+	remember = BooleanField('Remember Me ')
+	submit = SubmitField('Login')
+
+class AdminSignup(FlaskForm):
+	username = StringField('Username', validators = [DataRequired(), Length(min = 2, max = 20)])
+	email = StringField('Email', validators = [DataRequired(), Email()])
+	password = PasswordField('password', validators = [DataRequired()])
+	confirm_password = PasswordField('confirm password', validators = [DataRequired(), EqualTo('password')])
+	submit = SubmitField('Sign up')
